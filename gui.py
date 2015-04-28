@@ -16,9 +16,8 @@ import gettext
 # begin wxGlade: extracode
 # end wxGlade
 
-filename = ""
-
 class MyFrame(wx.Frame):
+    filename = "default"
     def __init__(self, *args, **kwds):
         # begin wxGlade: MyFrame.__init__
         wx.Frame.__init__(self, *args, **kwds)
@@ -57,16 +56,16 @@ class MyFrame(wx.Frame):
         if dlg.ShowModal() == wx.ID_OK:
  
             # get the new filename from the dialog
-            filename = dlg.GetPath()
+            self.filename = dlg.GetPath()
         dlg.Destroy()  # best to do this sooner than later
  
-        if filename:
-            print filename
+        if self.filename:
+            print self.filename
 
     def on_pushPlay(self, event):  # wxGlade: MyFrame.<event_handler>
         print "Starting"
-	print filename
-	pl.run(filename)
+	print self.filename
+	pl.run(self.filename)
         event.Skip()
 
 # end of class MyFrame
