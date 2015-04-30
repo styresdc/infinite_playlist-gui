@@ -45,6 +45,8 @@ Eventually these new calls from the Gui will be handled in IP throgh the use of 
 
 I'll be looking into strategic placement and assesing the Gui in multi threaded context. 
 
+**Continued ip-gui docs**
+
 **Dependencies**
 
 To use aqplayer.py, you will need:
